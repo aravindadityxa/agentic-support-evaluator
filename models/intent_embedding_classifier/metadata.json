@@ -1,0 +1,45 @@
+{
+  "model_type": "Logistic Regression + Sentence Embeddings",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "embedding_dimension": 384,
+  "preprocessing": {
+    "name": "remove_mentions",
+    "description": "@mentions removed, whitespace normalized"
+  },
+  "training_data": {
+    "file": "data/processed/train_labeled.csv",
+    "rows": 74034,
+    "label_source": "candidate_intent (automatically generated, ~23.5% error rate)"
+  },
+  "classifier_config": {
+    "solver": "lbfgs",
+    "max_iter": 1000,
+    "class_weight": "balanced",
+    "random_state": 42
+  },
+  "candidate_test_metrics": {
+    "accuracy": 0.5847,
+    "macro_f1": 0.5291,
+    "weighted_f1": 0.5628,
+    "macro_precision": 0.5632,
+    "macro_recall": 0.4895
+  },
+  "human_validation_metrics": {
+    "accuracy": 0.5150,
+    "macro_f1": 0.5012,
+    "weighted_f1": 0.4876,
+    "macro_precision": 0.5428,
+    "macro_recall": 0.4635
+  },
+  "preprocessing_ab_test": {
+    "variant_a_macro_f1": 0.5156,
+    "variant_b_macro_f1": 0.5291,
+    "selected_variant": "B",
+    "variant_b_improvement": "+2.6%"
+  },
+  "comparison_vs_tfidf": {
+    "baseline_human_val_f1": 0.4573,
+    "embedding_human_val_f1": 0.5012,
+    "improvement": "+9.6%"
+  }
+}

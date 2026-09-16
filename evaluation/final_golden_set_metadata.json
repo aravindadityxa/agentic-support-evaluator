@@ -1,0 +1,8 @@
+{
+  "total_cases": 249,
+  "intents_covered": 10,
+  "cases_per_intent": 25,
+  "source": "validation_labeled.csv",
+  "stratification": "equal_by_intent",
+  "annotation_provenance": "automated (no human review)"
+}
