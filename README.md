@@ -457,8 +457,3 @@ python run_agent.py --text "Your service is terrible"
 
 This project is provided as-is for evaluation and research purposes.
 
----
-
-**Status**: ✅ Evaluation Complete | 🔴 Not Production-Ready (40%) | ⏳ Week 1 Recalibration Needed
-
-Refer to results/ and evaluation/ directories for detailed metrics and data.
